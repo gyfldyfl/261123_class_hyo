@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이도윤 ♥ 김서연 결혼합니다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- 메인 커버 -->
+    <section class="cover">
+      <p class="cover__eng">We're getting married</p>
+      <div class="cover__photo" aria-hidden="true">
+        <span class="cover__initial">D &amp; S</span>
+      </div>
+      <h1 class="cover__names">이도윤 <span>&amp;</span> 김서연</h1>
+      <p class="cover__date">2027. 04. 17. 토요일 오후 12시 30분</p>
+      <p class="cover__place">더채플 앳 청담 3층 그레이스홀</p>
+    </section>
+
+    <!-- 초대 문구 -->
+    <section class="section fade">
+      <h2 class="section__title">INVITATION</h2>
+      <p class="invite__text">
+        서로가 마주보며 다져온 사랑을<br>
+        이제 함께 한 곳을 바라보며<br>
+        걸어갈 수 있는 큰 사랑으로 키우고자 합니다.<br><br>
+        저희 두 사람이 사랑의 이름으로<br>
+        지켜나갈 수 있게 앞날을<br>
+        축복해 주시면 감사하겠습니다.
+      </p>
+      <div class="parents">
+        <p><strong>이정훈 · 박미경</strong>의 장남 <b>도윤</b></p>
+        <p><strong>김성호 · 최은정</strong>의 장녀 <b>서연</b></p>
+      </div>
+    </section>
+
+    <!-- 날짜 / 달력 -->
+    <section class="section section--tint fade">
+      <h2 class="section__title">WEDDING DAY</h2>
+      <p class="calendar__head">2027년 4월 17일 토요일 오후 12:30</p>
+      <div class="calendar" id="calendar"></div>
+      <p class="dday" id="dday"></p>
+    </section>
+
+    <!-- 갤러리 -->
+    <section class="section fade">
+      <h2 class="section__title">GALLERY</h2>
+      <div class="gallery" id="gallery">
+        <button class="gallery__item g1" data-index="0" aria-label="사진 1 크게 보기"></button>
+        <button class="gallery__item g2" data-index="1" aria-label="사진 2 크게 보기"></button>
+        <button class="gallery__item g3" data-index="2" aria-label="사진 3 크게 보기"></button>
+        <button class="gallery__item g4" data-index="3" aria-label="사진 4 크게 보기"></button>
+        <button class="gallery__item g5" data-index="4" aria-label="사진 5 크게 보기"></button>
+        <button class="gallery__item g6" data-index="5" aria-label="사진 6 크게 보기"></button>
+      </div>
+    </section>
+
+    <!-- 오시는 길 -->
+    <section class="section section--tint fade">
+      <h2 class="section__title">LOCATION</h2>
+      <p class="loc__name">더채플 앳 청담</p>
+      <p class="loc__addr">서울특별시 강남구 선릉로 757</p>
+      <div class="loc__map" aria-hidden="true"><span>MAP</span></div>
+      <div class="loc__btns">
+        <a class="btn" href="https://map.naver.com/p/search/더채플앳청담" target="_blank" rel="noopener">네이버 지도</a>
+        <a class="btn" href="https://map.kakao.com/?q=더채플앳청담" target="_blank" rel="noopener">카카오맵</a>
+        <button class="btn" type="button" data-copy="서울특별시 강남구 선릉로 757">주소 복사</button>
+      </div>
+      <dl class="loc__info">
+        <dt>지하철</dt>
+        <dd>7호선 청담역 13번 출구 도보 7분</dd>
+        <dt>버스</dt>
+        <dd>청담사거리 정류장 하차 (141, 242, 362)</dd>
+        <dt>주차</dt>
+        <dd>건물 내 주차장 2시간 무료</dd>
+      </dl>
+    </section>
+
+    <!-- 마음 전하실 곳 -->
+    <section class="section fade">
+      <h2 class="section__title">마음 전하실 곳</h2>
+      <div class="account">
+        <button class="account__toggle" type="button" aria-expanded="false">신랑측 계좌번호</button>
+        <div class="account__body">
+          <div class="account__row">
+            <span>신랑 이도윤<br><small>국민 123-456-789012</small></span>
+            <button class="btn btn--sm" type="button" data-copy="국민 123-456-789012">복사</button>
+          </div>
+          <div class="account__row">
+            <span>아버지 이정훈<br><small>신한 110-234-567890</small></span>
+            <button class="btn btn--sm" type="button" data-copy="신한 110-234-567890">복사</button>
+          </div>
+        </div>
+      </div>
+      <div class="account">
+        <button class="account__toggle" type="button" aria-expanded="false">신부측 계좌번호</button>
+        <div class="account__body">
+          <div class="account__row">
+            <span>신부 김서연<br><small>우리 1002-345-678901</small></span>
+            <button class="btn btn--sm" type="button" data-copy="우리 1002-345-678901">복사</button>
+          </div>
+          <div class="account__row">
+            <span>아버지 김성호<br><small>하나 345-678901-23456</small></span>
+            <button class="btn btn--sm" type="button" data-copy="하나 345-678901-23456">복사</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Thank you for celebrating with us</p>
+      <button class="btn" type="button" id="shareBtn">링크 공유하기</button>
+    </footer>
+  </main>
+
+  <!-- 사진 크게보기 -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" type="button" aria-label="닫기">&times;</button>
+    <button class="lightbox__nav lightbox__prev" type="button" aria-label="이전">&#8249;</button>
+    <div class="lightbox__img" id="lightboxImg"></div>
+    <button class="lightbox__nav lightbox__next" type="button" aria-label="다음">&#8250;</button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
