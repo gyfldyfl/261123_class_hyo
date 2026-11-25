@@ -2,133 +2,180 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이도윤 ♥ 김서연 결혼합니다</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mellow Bean</title>
+  <meta name="description" content="하얀 컵에 담은 느긋한 하루, 대구 반월당 카페 Mellow Bean">
+
+  <!-- 폰트: 제목용 Jua, 본문용 Gowun Dodum -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="wrap">
 
-    <!-- 메인 커버 -->
-    <section class="cover">
-      <p class="cover__eng">We're getting married</p>
-      <div class="cover__photo" aria-hidden="true">
-        <span class="cover__initial">D &amp; S</span>
-      </div>
-      <h1 class="cover__names">이도윤 <span>&amp;</span> 김서연</h1>
-      <p class="cover__date">2027. 04. 17. 토요일 오후 12시 30분</p>
-      <p class="cover__place">더채플 앳 청담 3층 그레이스홀</p>
-    </section>
+  <!-- ===== 헤더: 로고 + 메뉴 (스크롤해도 위에 고정) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">Mellow Bean</a>
 
-    <!-- 초대 문구 -->
-    <section class="section fade">
-      <h2 class="section__title">INVITATION</h2>
-      <p class="invite__text">
-        서로가 마주보며 다져온 사랑을<br>
-        이제 함께 한 곳을 바라보며<br>
-        걸어갈 수 있는 큰 사랑으로 키우고자 합니다.<br><br>
-        저희 두 사람이 사랑의 이름으로<br>
-        지켜나갈 수 있게 앞날을<br>
-        축복해 주시면 감사하겠습니다.
-      </p>
-      <div class="parents">
-        <p><strong>이정훈 · 박미경</strong>의 장남 <b>도윤</b></p>
-        <p><strong>김성호 · 최은정</strong>의 장녀 <b>서연</b></p>
+      <!-- 모바일에서만 보이는 ☰ 버튼 -->
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav">☰</button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== 1. 메인 배너: 큰 사진 한 장 + 문구 ===== -->
+    <section class="hero">
+      <img src="images/cafe-interior.jpg" alt="원두 자루와 로스터가 보이는 넓고 밝은 Mellow Bean 매장 내부" width="1280" height="870" class="hero-img">
+      <div class="hero-text">
+        <h1 class="hero-title">MELLOW BEAN</h1>
+        <p class="hero-copy">하얀 컵에 담은 느긋한 하루</p>
       </div>
     </section>
 
-    <!-- 날짜 / 달력 -->
-    <section class="section section--tint fade">
-      <h2 class="section__title">WEDDING DAY</h2>
-      <p class="calendar__head">2027년 4월 17일 토요일 오후 12:30</p>
-      <div class="calendar" id="calendar"></div>
-      <p class="dday" id="dday"></p>
-    </section>
-
-    <!-- 갤러리 -->
-    <section class="section fade">
-      <h2 class="section__title">GALLERY</h2>
-      <div class="gallery" id="gallery">
-        <button class="gallery__item g1" data-index="0" aria-label="사진 1 크게 보기"></button>
-        <button class="gallery__item g2" data-index="1" aria-label="사진 2 크게 보기"></button>
-        <button class="gallery__item g3" data-index="2" aria-label="사진 3 크게 보기"></button>
-        <button class="gallery__item g4" data-index="3" aria-label="사진 4 크게 보기"></button>
-        <button class="gallery__item g5" data-index="4" aria-label="사진 5 크게 보기"></button>
-        <button class="gallery__item g6" data-index="5" aria-label="사진 6 크게 보기"></button>
-      </div>
-    </section>
-
-    <!-- 오시는 길 -->
-    <section class="section section--tint fade">
-      <h2 class="section__title">LOCATION</h2>
-      <p class="loc__name">더채플 앳 청담</p>
-      <p class="loc__addr">서울특별시 강남구 선릉로 757</p>
-      <div class="loc__map" aria-hidden="true"><span>MAP</span></div>
-      <div class="loc__btns">
-        <a class="btn" href="https://map.naver.com/p/search/더채플앳청담" target="_blank" rel="noopener">네이버 지도</a>
-        <a class="btn" href="https://map.kakao.com/?q=더채플앳청담" target="_blank" rel="noopener">카카오맵</a>
-        <button class="btn" type="button" data-copy="서울특별시 강남구 선릉로 757">주소 복사</button>
-      </div>
-      <dl class="loc__info">
-        <dt>지하철</dt>
-        <dd>7호선 청담역 13번 출구 도보 7분</dd>
-        <dt>버스</dt>
-        <dd>청담사거리 정류장 하차 (141, 242, 362)</dd>
-        <dt>주차</dt>
-        <dd>건물 내 주차장 2시간 무료</dd>
-      </dl>
-    </section>
-
-    <!-- 마음 전하실 곳 -->
-    <section class="section fade">
-      <h2 class="section__title">마음 전하실 곳</h2>
-      <div class="account">
-        <button class="account__toggle" type="button" aria-expanded="false">신랑측 계좌번호</button>
-        <div class="account__body">
-          <div class="account__row">
-            <span>신랑 이도윤<br><small>국민 123-456-789012</small></span>
-            <button class="btn btn--sm" type="button" data-copy="국민 123-456-789012">복사</button>
-          </div>
-          <div class="account__row">
-            <span>아버지 이정훈<br><small>신한 110-234-567890</small></span>
-            <button class="btn btn--sm" type="button" data-copy="신한 110-234-567890">복사</button>
-          </div>
-        </div>
-      </div>
-      <div class="account">
-        <button class="account__toggle" type="button" aria-expanded="false">신부측 계좌번호</button>
-        <div class="account__body">
-          <div class="account__row">
-            <span>신부 김서연<br><small>우리 1002-345-678901</small></span>
-            <button class="btn btn--sm" type="button" data-copy="우리 1002-345-678901">복사</button>
-          </div>
-          <div class="account__row">
-            <span>아버지 김성호<br><small>하나 345-678901-23456</small></span>
-            <button class="btn btn--sm" type="button" data-copy="하나 345-678901-23456">복사</button>
-          </div>
+    <!-- ===== 2. 소개 ===== -->
+    <section class="section about">
+      <div class="container about-inner">
+        <img src="images/hand-drip-coffee.jpg" alt="구리 주전자로 핸드드립 커피를 내리는 모습" width="1000" height="666" loading="lazy" class="about-img">
+        <div class="about-text">
+          <h2 class="section-title">Slow Coffee</h2>
+          <p>서두르지 않아도 괜찮은 곳.
+             Mellow Bean은 매일 아침 직접 고른 원두로
+             한 잔 한 잔 천천히 내립니다.</p>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>Thank you for celebrating with us</p>
-      <button class="btn" type="button" id="shareBtn">링크 공유하기</button>
-    </footer>
+    <!-- ===== 3. 메뉴 ===== -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2 class="section-title">Menu</h2>
+
+        <!-- 메뉴 카드: 데스크톱에서 한 줄에 4개, 모바일에서 2개 -->
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img src="images/cafe-latte.jpg" alt="나뭇잎 라떼아트가 그려진 유리잔 카페라떼" width="1000" height="864" loading="lazy">
+            <p class="menu-category">Coffee</p>
+            <h3 class="menu-name">카페라떼</h3>
+            <p class="menu-desc">부드러운 우유와 에스프레소</p>
+            <p class="menu-price">5,000</p>
+          </article>
+          <article class="menu-card">
+            <img src="images/hand-drip-coffee.jpg" alt="핸드드립으로 내리는 오늘의 커피" width="1000" height="666" loading="lazy">
+            <p class="menu-category">Coffee</p>
+            <h3 class="menu-name">오늘의 핸드드립</h3>
+            <p class="menu-desc">바리스타가 고른 싱글오리진</p>
+            <p class="menu-price">6,000</p>
+          </article>
+          <article class="menu-card">
+            <img src="images/strawberry-latte.jpg" alt="생딸기를 올린 분홍빛 딸기라떼" width="729" height="1000" loading="lazy">
+            <p class="menu-category">Non-Coffee</p>
+            <h3 class="menu-name">딸기라떼</h3>
+            <p class="menu-desc">생딸기를 갈아 넣은 시즌 메뉴</p>
+            <p class="menu-price">6,000</p>
+          </article>
+          <article class="menu-card">
+            <img src="images/lemonade.jpg" alt="줄무늬 빨대가 꽂힌 노란 레몬에이드" width="753" height="1000" loading="lazy">
+            <p class="menu-category">Non-Coffee</p>
+            <h3 class="menu-name">레몬에이드</h3>
+            <p class="menu-desc">직접 담근 레몬청과 탄산</p>
+            <p class="menu-price">5,500</p>
+          </article>
+          <article class="menu-card">
+            <img src="images/tiramisu.jpg" alt="초콜릿 조각을 올린 티라미수" width="1000" height="753" loading="lazy">
+            <p class="menu-category">Dessert</p>
+            <h3 class="menu-name">티라미수</h3>
+            <p class="menu-desc">마스카포네 크림과 초콜릿</p>
+            <p class="menu-price">6,500</p>
+          </article>
+          <article class="menu-card">
+            <img src="images/latte-cookie-set.jpg" alt="하트 라떼아트 머그와 초코칩 쿠키" width="1000" height="841" loading="lazy">
+            <p class="menu-category">Dessert</p>
+            <h3 class="menu-name">라떼 &amp; 쿠키 세트</h3>
+            <p class="menu-desc">카페라떼와 수제 초코칩 쿠키</p>
+            <p class="menu-price">7,000</p>
+          </article>
+
+          <!-- 사진 없는 메뉴: 두 번째 줄의 빈 2칸을 채움 -->
+          <div class="menu-more">
+            <p class="menu-category">More Coffee</p>
+            <ul class="menu-list">
+              <li><span>아메리카노</span><span class="menu-price">4,500</span></li>
+              <li><span>바닐라라떼</span><span class="menu-price">5,500</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. 갤러리: 인스타 피드 같은 정사각형 격자 ===== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-sub">#mellowbean 의 순간들</p>
+
+        <div class="gallery-grid">
+          <img src="images/cafe-interior.jpg" alt="Mellow Bean 매장 내부" width="1280" height="870" loading="lazy">
+          <img src="images/latte-cookie-set.jpg" alt="창가의 라떼와 쿠키" width="1000" height="841" loading="lazy">
+          <img src="images/cafe-latte.jpg" alt="유리잔 카페라떼" width="1000" height="864" loading="lazy">
+          <img src="images/strawberry-latte.jpg" alt="딸기라떼" width="729" height="1000" loading="lazy">
+          <img src="images/hand-drip-coffee.jpg" alt="핸드드립 커피" width="1000" height="666" loading="lazy">
+          <img src="images/lemonade.jpg" alt="레몬에이드" width="753" height="1000" loading="lazy">
+          <img src="images/tiramisu.jpg" alt="티라미수" width="1000" height="753" loading="lazy">
+        </div>
+
+        <p class="gallery-insta">Instagram <a href="#">@mellowbean.cafe</a></p>
+      </div>
+    </section>
+
+    <!-- ===== 5. 오시는 길 ===== -->
+    <section class="section" id="location">
+      <div class="container location-inner">
+        <h2 class="section-title">Location</h2>
+
+        <dl class="info-table">
+          <div><dt>주소</dt><dd>대구광역시 중구 동성로 00, 1층</dd></div>
+          <div><dt>영업시간</dt><dd>매일 10:00 – 21:00 <span class="text-sub">(라스트오더 20:30)</span></dd></div>
+          <div><dt>휴무</dt><dd>매주 월요일</dd></div>
+          <div><dt>전화</dt><dd><a href="tel:020000000">02-000-0000</a></dd></div>
+          <div><dt>인스타그램</dt><dd><a href="#">@mellowbean.cafe</a></dd></div>
+        </dl>
+
+        <p class="text-sub directions">
+          1·2호선 반월당역에서 북쪽으로 도보 5분 (아래 약도 참고)<br>
+          주차 공간이 없어 인근 공영주차장을 이용해 주세요.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 6. 약도: 카페 위치를 빨간 원으로 표시한 지도 이미지 ===== -->
+    <section class="section map-image">
+      <div class="container">
+        <img src="images/cafe-map.png" alt="반월당역 북쪽, 빨간 원으로 표시된 카페 위치 약도" width="695" height="536" loading="lazy">
+      </div>
+    </section>
+
   </main>
 
-  <!-- 사진 크게보기 -->
-  <div class="lightbox" id="lightbox" hidden>
-    <button class="lightbox__close" type="button" aria-label="닫기">&times;</button>
-    <button class="lightbox__nav lightbox__prev" type="button" aria-label="이전">&#8249;</button>
-    <div class="lightbox__img" id="lightboxImg"></div>
-    <button class="lightbox__nav lightbox__next" type="button" aria-label="다음">&#8250;</button>
-  </div>
+  <!-- ===== 푸터 ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Mellow Bean</p>
+      <p>대구광역시 중구 동성로 00, 1층 · 매일 10:00 – 21:00 (월 휴무)</p>
+      <p>02-000-0000 · @mellowbean.cafe</p>
+      <p class="copyright">© 2026 Mellow Bean</p>
+    </div>
+  </footer>
 
-  <div class="toast" id="toast"></div>
-
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
